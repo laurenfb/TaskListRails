@@ -1,2 +1,17 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<h1>Here's your task...</h1>
+
+<h2><%= @current_task[:id]%><%="."%> <%= @current_task[:title] %></h2>
+
+<p>
+  <%= @current_task[:description] %>
+</p>
+
+<h6><% if @current_task[:complete] == true %>
+      <%= "status: complete" %>
+      <br />
+      <%= @current_task[:completed_at] %>
+    <% else %>
+      <%= "status: incomplete" %>
+    <% end %>
+
+</h6>
