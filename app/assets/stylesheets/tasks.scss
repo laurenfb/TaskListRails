@@ -1,3 +1,54 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  font-family: sans-serif;
+  padding-left: 4vmin;
+}
+
+header {
+  background-color: rgb(150, 231, 224);
+  padding: 4vmin;
+  margin-bottom: 1vmin;
+}
+
+footer {
+  background-color: rgb(150, 231, 224);
+  height: 4em;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 1em;
+
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+  padding: 4vmin 0 0 4vmin;
+}
+
+article {
+  margin-top: 4vmin;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.75em;
+}
+
+h5 {
+  font-size: 1.5em;
+}
+
+h6 {
+  font-size: 1.25em;
+}
