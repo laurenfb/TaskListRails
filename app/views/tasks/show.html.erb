@@ -1,17 +1,22 @@
-<h1>Here's your task...</h1>
+<% id = params[:id] %>
+<% task = Task.find(id) %>
 
-<h2><%= @current_task[:id]%><%="."%> <%= @current_task[:title] %></h2>
+<h2>Here's your task...</h2>
+
+<article>
+<h3><%= task.id%><%="."%> <%= task.title %></h3>
 
 <p>
-  <%= @current_task[:description] %>
+  <%= task.description %>
 </p>
 
-<h6><% if @current_task[:complete] == true %>
+<h6><% if task.complete == true %>
       <%= "status: complete" %>
       <br />
-      <%= @current_task[:completed_at] %>
+      <%= task.completed_at %>
     <% else %>
       <%= "status: incomplete" %>
     <% end %>
 
 </h6>
+</article>

@@ -1,11 +1,11 @@
-<h1>Tasks</h1>
+<h2>Tasks</h2>
 
 <% counter = 1 %>
-<h2><% @tasks.each do |task| %>
+<h3><% @tasks.each do |task| %>
   <%= "#{counter}." %> <%=link_to(task[:title], show_path(task[:id]))  %>
   <% counter += 1 %>
   <br />
-<% end %></h2>
+<% end %></h3>
 
 
 <!-- link_to( post[:title], show_path(post[:id]) ) -->
