@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tasklistrails</title>
+  <title>to do 4 u</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <link rel='stylesheet' href='./assets/reset.css' />
 </head>
 <body>
 
+  <header>
+    <h1>to do 4 u! </h1>
+    <h5>the best to-do website there even is</h5>
+  </header>
+
 <%= yield %>
 
+  <footer>
+    <h5>all the to dos you want to do </h5>
+  </footer>
 </body>
 </html>
