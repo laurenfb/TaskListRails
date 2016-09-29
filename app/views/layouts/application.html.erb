@@ -10,12 +10,20 @@
 </head>
 <body>
 
+
   <header>
-    <h1>to do 4 u! </h1>
+    <h1><%= link_to("to do 4 u!", index_path) %></h1>
     <h5>the best to-do website there even is</h5>
+
+    <ul>
+      <li><%= link_to("home", index_path) %></li>
+      <li><%= link_to("new task", new_path) %></li>
+    </ul>
   </header>
 
-<%= yield %>
+  <main>
+    <%= yield %>
+  </main>
 
   <footer>
     <h5>all the to dos you want to do </h5>

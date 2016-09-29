@@ -2,15 +2,15 @@ Rails.application.routes.draw do
 
   root to: 'tasks#index'
 
-  get 'tasks/index'
+  get 'tasks/index' => 'tasks#index', as: 'index'
 
   get 'tasks/show'
 
   get 'tasks/show/:id' => 'tasks#show', as: 'show'
 
-  get 'tasks/new'
+  get 'tasks/new' => 'tasks/new', as: 'new'
 
-  get 'tasks/create'
+  post 'tasks/create' => 'tasks#create', as: 'create'
 
   get 'tasks/edit'
 

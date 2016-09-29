@@ -4,8 +4,8 @@
 
 * {
   font-family: sans-serif;
-  padding-left: 4vmin;
 }
+
 
 header {
   background-color: rgb(150, 231, 224);
@@ -16,12 +16,17 @@ header {
 footer {
   background-color: rgb(150, 231, 224);
   height: 4em;
-  position: absolute;
-  right: 0;
+  position: relative;
   bottom: 0;
   left: 0;
-  padding-top: 1em;
+  right: 0;
+  padding: 1em 0 0 4vmin;
+}
 
+main {
+  overflow: scroll;
+  height: 100vh;
+  padding-left: 4vmin;
 }
 
 h1 {
@@ -51,4 +56,14 @@ h5 {
 
 h6 {
   font-size: 1.25em;
+}
+
+ul {
+  float: right;
+  margin-top: -6vh;
+}
+
+li {
+  display: inline;
+  padding: 2vmin;
 }
