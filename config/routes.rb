@@ -12,11 +12,12 @@ Rails.application.routes.draw do
 
   post 'tasks/create' => 'tasks#create', as: 'create'
 
-  get 'tasks/edit'
+  get 'tasks/:id/edit' => 'tasks#edit', as: 'edit'
 
-  get 'tasks/update'
+  patch 'tasks/:id/update' => 'tasks#update', as: 'update'
+  # do this later - want to  make it put instead
 
-  get 'tasks/destroy'
+  delete 'tasks/destroy' => 'tasks#destroy', as: 'delete'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
