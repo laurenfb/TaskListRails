@@ -1,2 +1,17 @@
-<h1>Tasks#update</h1>
-<p>Find me in app/views/tasks/update.html.erb</p>
+<h1>yo your task has been updated!</h1>
+
+<br />
+<br />
+<br />
+
+<h3><%= @task.title %></h3>
+<p>
+  <%= @task.description %>
+</p>
+
+<h6>
+  <%= @task.check_complete%>
+</h6>
+
+<%= link_to("edit this task", edit_path) %>
+<%= link_to("see all tasks", index_path) %>

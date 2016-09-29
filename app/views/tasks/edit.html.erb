@@ -1,2 +1,28 @@
-<h1>Tasks#edit</h1>
-<p>Find me in app/views/tasks/edit.html.erb</p>
+<h1>cool let's edit the task</h1>
+
+
+<%= form_for @task, url: update_path do |form| %>
+
+  <%= form.label :title %>
+  <br />
+  <%= form.text_field :title %>
+
+  <br />
+
+  <%= form.label :description %>
+  <br />
+  <%= form.text_area :description, size: "30x30" %>
+
+  <br />
+
+  <%= form.label :complete %>
+  <br />
+  <%= form.check_box :complete %>
+
+  <br />
+
+  <%= form.submit %>
+
+<% end  %>
+
+<%= @params %>

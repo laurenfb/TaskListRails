@@ -1,6 +1,6 @@
 <h2>Tasks</h2>
 
-<% counter = 0 %>
+<% counter = 1 %>
 <h3><% @tasks.each do |task| %>
   <%= "#{counter}." %> <%=link_to(task.title, show_path(task.id))  %>
   <% counter += 1 %>

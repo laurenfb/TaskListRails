@@ -3,14 +3,16 @@
 <br />
 <br />
 
-<h3><%= @task.title %></h3>
-<br />
+<h3>it is called <%= @task.title %></h3>
+<!-- <br />
 <p>
   <%= @task.description %>
 </p>
-<h5><%= @task.check_complete %></h5>
+<h5><%= @task.check_complete %></h5> -->
 
 
 <p>
   <%= link_to("you can see all the tasks if you want!", index_path) %>
+  <br />
+  <%= link_to("or you can edit this task", edit_path(@task.id)) %>
 </p>
