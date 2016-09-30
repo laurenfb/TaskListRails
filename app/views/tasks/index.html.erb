@@ -3,9 +3,17 @@
 <% counter = 1 %>
 <h3><% @tasks.each do |task| %>
   <%= "#{counter}." %> <%=link_to(task.title, show_path(task.id))  %>
+
+  <%= button_to("edit this task", edit_path(task.id), method: :get)%>
+
+  <%= button_to("delete this task", delete_path(task.id), method: :delete, data: {confirm: "are you sure? you can't undo this."})%>
   <% counter += 1 %>
   <br />
 <% end %></h3>
 
 
 <!-- link_to( post[:title], show_path(post[:id]) ) -->
+
+<!-- button_to(name = nil, options = nil, html_options = nil, &block) -->
+
+<!-- ){action: 'delete', id: task[:id]} -->
