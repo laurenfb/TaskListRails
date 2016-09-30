@@ -5,5 +5,12 @@ class Task < ActiveRecord::Base
     return complete_q
   end
 
+  def mark_complete(status)
+    if status
+      self.complete = status
+      self.completed_at = Time.now
+    end
+  end
+
 
 end

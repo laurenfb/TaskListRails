@@ -17,11 +17,8 @@ class TasksController < ApplicationController
     @task = Task.new
     @task.title = params[:task][:title]
     @task.description = params[:task][:description]
-    @task.complete = params[:task][:complete]
 
-    if @task.complete
-      @task.completed_at = Time.now
-    end
+    @task.mark_complete(params[:task][:complete])
 
     @task.save
   end
@@ -38,13 +35,7 @@ class TasksController < ApplicationController
     @task.title = params[:task][:title]
     @task.description = params[:task][:description]
 
-  # make a mark_complete method in the Model that marks complete if it's complete, and also timestamps it if it is complete
-
-    @task.complete = params[:task][:complete]
-
-    if @task.complete
-      @task.completed_at = Time.now
-    end
+    @task.mark_complete(params[:task][:complete])
 
     @task.save
   end
