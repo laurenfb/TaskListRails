@@ -37,6 +37,9 @@ class TasksController < ApplicationController
 
     @task.title = params[:task][:title]
     @task.description = params[:task][:description]
+
+  # make a mark_complete method in the Model that marks complete if it's complete, and also timestamps it if it is complete
+
     @task.complete = params[:task][:complete]
 
     if @task.complete
@@ -51,5 +54,7 @@ class TasksController < ApplicationController
     @task = tasks.find(params[:id])
 
     @task.destroy
+
+    redirect_to(action: 'index')
   end
 end
