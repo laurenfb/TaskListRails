@@ -8,7 +8,7 @@ class Task < ActiveRecord::Base
   def mark_complete(status)
     if status
       self.complete = status
-      self.completed_at = Time.now
+      self.completed_at = Time.zone.now
     end
   end
 
