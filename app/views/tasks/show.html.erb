@@ -11,5 +11,4 @@
   <%= @task.check_complete%>
 </h6>
 
-<%= link_to("edit this task", edit_path) %>
-<%= link_to("delete this task", delete_path, method: :delete) %>
+<%= render partial: "button_file" %>

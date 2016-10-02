@@ -4,8 +4,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    tasks = Task.all
-    @task = tasks.find(params[:id])
+    @task = Task.find(params[:id])
   end
 
   def new
@@ -24,13 +23,11 @@ class TasksController < ApplicationController
   end
 
   def edit
-    tasks = Task.all
-    @task = tasks.find(params[:id])
+    @task = Task.find(params[:id])
   end
 
   def update
-    tasks = Task.all
-    @task = tasks.find(params[:id])
+    @task = Task.find(params[:id])
 
     @task.title = params[:task][:title]
     @task.description = params[:task][:description]
@@ -41,11 +38,12 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    tasks = Task.all
-    @task = tasks.find(params[:id])
-
+    @task = Task.find(params[:id])
     @task.destroy
-
     redirect_to(action: 'index')
+  end
+
+  def task
+    @task ||= Task.find(params[:id])
   end
 end

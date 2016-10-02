@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get 'tasks/:id/edit' => 'tasks#edit', as: 'edit'
 
-  patch 'tasks/:id/update' => 'tasks#update', as: 'update'
+  put 'tasks/:id/update' => 'tasks#update', as: 'update'
   # do this later - want to  make it put instead
 
   delete 'tasks/:id' => 'tasks#destroy', as: 'delete'

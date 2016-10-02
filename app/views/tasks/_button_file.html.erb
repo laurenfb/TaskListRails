@@ -1,0 +1,3 @@
+<%= button_to("edit this task", edit_path(@task.id), method: :get)%>
+
+<%= button_to("delete this task", delete_path(@task.id), method: :delete, data: {confirm: "are you sure? you can't undo this."})%>

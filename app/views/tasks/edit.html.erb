@@ -1,7 +1,7 @@
 <h1>cool let's edit the task</h1>
 
 
-<%= form_for @task, url: update_path do |form| %>
+<%= form_for @task, method: :put, url: update_path do |form| %>
 
   <%= form.label :title %>
   <br />
@@ -24,5 +24,3 @@
   <%= form.submit %>
 
 <% end  %>
-
-<%= @params %>
