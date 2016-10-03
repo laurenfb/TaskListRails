@@ -1,3 +1,18 @@
+### Reflection on task list project:
+
+I really enjoyed working with Rails. The whole group seemed to be moving at about the same pace, which was great because we were able to ask questions of each other rather than relying on teachers and TAs. The best part was that oftentimes I'd answer a question for a classmate, then turn around 20 minutes later and ask them for help. The collaborative aspect was great. 
+
+I'm proud of rendering the buttons partial (is this the correct phrasing? i have no idea!). It's pretty cool to see the same buttons repeated everywhere. If I'd had time on Friday I would also have done so for the editing vs. entry form. But since I'd already hit the optional requirement I decided not to over the weekend.
+
+My 2 chair pairs (chair trio!) were Jeannie and Melissa. I liked that Melissa's app was more user-friendly in its organization and the UI  made more sense (she separated out the open vs. completed tasks from the user's perspective, which was really cool). Jeannie is really good at making sure the correct logic goes in the right place (model vs. controller), and I take inspiration from her understanding of this compartmentalization.
+
+The thing I'd definitely change about my app, if I could, is the very strange way that the font sizes sometimes break after you delete a task. I have no idea what's causing this, since it's definitely rendering the rest of my CSS ......... just not the right font sizes, and only after deletion.
+
+
+
+
+
+
 # Task List Rails ✅
 We are going to build a Task List in Rails. This web application will enable us to keep track of list of tasks with the functionality to add, edit and remove tasks from a list.
 
