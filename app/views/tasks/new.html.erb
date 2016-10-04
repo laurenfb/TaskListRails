@@ -1,8 +1,8 @@
 <h1>let's do some stuff! make a new task:</h1>
 
+<%= render partial: 'form' %>
 
-
-<%= form_for @task, url: create_path do |form| %>
+<!-- <%= form_for @task, url: create_path do |form| %>
 
   <%= form.label :title %>
   <br />
@@ -25,7 +25,7 @@
   <%= form.submit %>
 
 <% end  %>
-
+ -->
 <!-- <form name='new-task' action='create' method='post'>
   <input type='hidden' name='_method' value='put' />
 

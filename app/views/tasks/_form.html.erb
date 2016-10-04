@@ -1,8 +1,4 @@
-<h1>cool let's edit the task</h1>
-
-<%= render partial: 'form' %>
-
-<!-- <%= form_for @task, method: :put, url: update_path do |form| %>
+<%= form_for @task, method: @method, url: @path do |form| %>
 
   <%= form.label :title %>
   <br />
@@ -23,5 +19,4 @@
   <br />
 
   <%= form.submit %>
-
-<% end  %> -->
+<% end  %>
