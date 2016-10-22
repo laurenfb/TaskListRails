@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'sessions/create'
+
   root to: 'tasks#index'
+
+  # this to: is the same as a hash rocket
+  get 'auth/:provider/callback', to: 'sessions#create'
 
   get 'tasks/index' => 'tasks#index', as: 'index'
 
