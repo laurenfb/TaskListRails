@@ -13,5 +13,13 @@ class Task < ActiveRecord::Base
     end
   end
 
+  private
+  def self.login_or_out_button(id)
+    if id
+      "<a href='/logout'>logout</a>".html_safe
+    else
+      "<a href='/auth/github'>login</a>".html_safe
+    end
+  end
 
 end
