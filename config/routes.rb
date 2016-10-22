@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'homepages/index'
+
   root to: 'tasks#index'
 
   # this to: is the same as a hash rocket
