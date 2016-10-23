@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   before_action :current_task, only: [:show, :edit, :update, :destroy]
   before_action :users_tasks, only: [:index]
+  before_action :logged_in
 
   def index ;  end
 
@@ -29,9 +30,7 @@ class TasksController < ApplicationController
   def update
     @task.title = params[:task][:title]
     @task.description = params[:task][:description]
-
     @task.mark_complete(params[:task][:complete])
-
     @task.save
   end
 
