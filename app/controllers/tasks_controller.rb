@@ -17,7 +17,7 @@ class TasksController < ApplicationController
     @task.description = params[:task][:description]
 
     @task.mark_complete(params[:task][:complete])
-
+    @task.user_id = session[:user_id]
     @task.save
   end
 
@@ -42,7 +42,7 @@ class TasksController < ApplicationController
 
   private
   def users_tasks
-    @tasks = Task.all
+    @tasks = Task.where(user_id: session[:user_id])
   end
 
   def current_task
