@@ -49,5 +49,12 @@ class TasksController < ApplicationController
     @task = Task.find_by(id: params[:id])
   end
 
+  def logged_in
+    user = User.find_by(id: session[:user_id])
+    if user.nil?
+      flash[:notice] = "Please log in to have access to the page you requested"
+      redirect_to root_path
+    end
+  end
 
 end
