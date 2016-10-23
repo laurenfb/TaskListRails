@@ -9,8 +9,6 @@ Rails.application.routes.draw do
 
   get 'tasks/index' => 'tasks#index', as: 'index'
 
-  get 'tasks/show'
-
   get 'tasks/show/:id' => 'tasks#show', as: 'show'
 
   get 'tasks/new' => 'tasks/new', as: 'new'

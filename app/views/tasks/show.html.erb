@@ -11,4 +11,6 @@
   <%= @task.check_complete%>
 </h6>
 
-<%= render partial: "button_file" %>
+<%= render partial: "button_file", locals: {task_id: @task.id} %>
+
+<%= link_to("back to your task list", index_path) %>
