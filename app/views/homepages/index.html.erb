@@ -1,2 +1,4 @@
-<h1>Homepages#index</h1>
-<p>Find me in app/views/homepages/index.html.erb</p>
+
+  <h1><%= link_to("to do 4 u!", index_path) %></h1>
+  <h5>the best to-do website there even is</h5>
+  <%=Task.login_or_out_button(session[:user_id])%>
