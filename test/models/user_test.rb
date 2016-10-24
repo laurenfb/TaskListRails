@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
 
-  let(:ada) { users(:ada) }
+  # let(:ada) { users(:ada) }
 
   test "the truth" do
     assert true
