@@ -6,30 +6,26 @@
 <% counter = 1 %>
 <h3>incomplete tasks</h3>
 
-  <% @tasks.each do |task| %>
-    <% if !task.complete? %>
+  <% @incomplete_tasks.each do |task| %>
       <p>
         <%= "#{counter}." %> <%=link_to(task.title, show_path(task.id))%>
         <%= render partial: "button_file", locals: {task_id: task.id} %>
       </p>
       <% counter += 1 %>
-    <% end %>
     <br />
   <% end %>
 
-  <% counter = 1 %>
-  <h3>completed tasks</h3>
+<% counter = 1 %>
+<h3>completed tasks</h3>
 
-    <% @tasks.each do |task| %>
-      <% if task.complete? %>
-        <p>
-          <%= "#{counter}." %> <%=link_to(task.title, show_path(task.id))%>
-          <%= render partial: "button_file", locals: {task_id: task.id} %>
-        </p>
-        <% counter += 1 %>
-      <% end %>
-      <br />
-    <% end %>
+  <% @complete_tasks.each do |task| %>
+      <p>
+        <%= "#{counter}." %> <%=link_to(task.title, show_path(task.id))%>
+        <%= render partial: "button_file", locals: {task_id: task.id} %>
+      </p>
+      <% counter += 1 %>
+    <br />
+  <% end %>
 
 
 <!-- link_to( post[:title], show_path(post[:id]) ) -->

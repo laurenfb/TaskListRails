@@ -4,7 +4,18 @@ class TasksController < ApplicationController
   before_action :logged_in
   before_action :check_permission, only: [:show, :edit]
 
-  def index ;  end
+  def index
+    @complete_tasks = []
+    @incomplete_tasks = []
+
+    @tasks.each do |task|
+      if task.complete?
+        @complete_tasks << task
+      else
+        @incomplete_tasks << task
+      end
+    end 
+  end
 
   def show ;  end
 
