@@ -5,10 +5,10 @@ adas_task:
   description: "fortran"
   complete: false
   completed_at: 2016-09-28 14:55:16
-  user: :ada
+  user_id: 1
 
 babbages_task:
   title: "make 1st computer"
   description: "build it yo"
   complete: false
-  user: :babbage
+  user_id: 2
