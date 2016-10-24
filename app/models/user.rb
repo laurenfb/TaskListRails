@@ -12,5 +12,5 @@ class User < ActiveRecord::Base
 
     return user
   end
-  
+
 end

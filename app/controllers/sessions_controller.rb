@@ -19,11 +19,13 @@ class SessionsController < ApplicationController
   end
 
   def index
-    @user = User.find(session[:user_id])
+    @user = User.find_by(id: session[:user_id])
     # recalls the value set in a previous request
   end
 
   def destroy
     session[:user_id] = nil
-  end 
+    flash[:notice] = "logged out! thanks for tasking!"
+    redirect_to root_path
+  end
 end

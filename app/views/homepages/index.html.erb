@@ -1,0 +1,12 @@
+
+<aside class='flash-notice'>
+  <% if flash[:notice]%>
+    <%= flash[:notice] %>
+    <% flash[:notice] = nil %>
+  <% end %>
+</aside>
+
+
+  <h1><%= link_to("to do 4 u!", index_path) %></h1>
+  <h5>the best to-do website there even is</h5>
+  <%=Task.login_or_out_button(session[:user_id])%>

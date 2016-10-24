@@ -3,7 +3,7 @@
 <br />
 <br />
 
-<h3><%= @task.title %> has been created </h3>
+<h3>'<%= @task.title %>' has been created </h3>
 <br />
 <p>
   <%= @task.description %>
@@ -12,8 +12,9 @@
 
 
 <p>
-  <%= link_to("you can see all the tasks if you want!", index_path) %>
-  <br />
 
-  <%= render partial: "button_file" %>
+  <%= render partial: "button_file", locals: {task_id: @task.id} %>
+
+  <%= link_to("back to your task list", index_path) %>
+
 </p>

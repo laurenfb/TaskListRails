@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>to do 4 u</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <main>
+    <%= yield %>
+  </main>
+
+  <footer>
+    <h5>all the to dos you want to do </h5>
+  </footer>
+</body>
+</html>

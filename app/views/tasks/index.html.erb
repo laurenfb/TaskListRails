@@ -1,15 +1,31 @@
+
+<h4><%= flash[:notice] %></h4>
+
 <h2>Tasks</h2>
 
 <% counter = 1 %>
-<h3><% @tasks.each do |task| %>
-  <% @task = task %>
-  <%= "#{counter}." %> <%=link_to(task.title, show_path(task.id))  %>
+<h3>incomplete tasks</h3>
 
-  <%= render partial: "button_file" %>
+  <% @incomplete_tasks.each do |task| %>
+      <p>
+        <%= "#{counter}." %> <%=link_to(task.title, show_path(task.id))%>
+        <%= render partial: "button_file", locals: {task_id: task.id} %>
+      </p>
+      <% counter += 1 %>
+    <br />
+  <% end %>
 
-  <% counter += 1 %>
-  <br />
-<% end %></h3>
+<% counter = 1 %>
+<h3>completed tasks</h3>
+
+  <% @complete_tasks.each do |task| %>
+      <p>
+        <%= "#{counter}." %> <%=link_to(task.title, show_path(task.id))%>
+        <%= render partial: "button_file", locals: {task_id: task.id} %>
+      </p>
+      <% counter += 1 %>
+    <br />
+  <% end %>
 
 
 <!-- link_to( post[:title], show_path(post[:id]) ) -->
