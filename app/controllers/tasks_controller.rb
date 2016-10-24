@@ -1,7 +1,8 @@
 class TasksController < ApplicationController
   before_action :current_task, only: [:show, :edit, :update, :destroy]
-  before_action :users_tasks, only: [:index]
+  before_action :users_tasks, only: [:index, :show, :edit]
   before_action :logged_in
+  before_action :check_permission, only: [:show, :edit]
 
   def index ;  end
 
@@ -19,7 +20,14 @@ class TasksController < ApplicationController
 
     @task.mark_complete(params[:task][:complete])
     @task.user_id = session[:user_id]
-    @task.save
+
+    if @task.save
+      flash[:notice] = "task successfully saved!"
+      redirect_to index_path
+    else
+      flash[:notice] = "your task couldn't save. please try again."
+      redirect_to new_path
+    end
   end
 
   def edit
@@ -53,6 +61,13 @@ class TasksController < ApplicationController
     if user.nil?
       flash[:notice] = "Please log in to have access to the page you requested"
       redirect_to root_path
+    end
+  end
+
+  def check_permission
+    if !@tasks.include?(@task)
+      flash[:notice] = "you do not have permission to access the requested page. instead, here are your tasks!"
+      redirect_to index_path
     end
   end
 
