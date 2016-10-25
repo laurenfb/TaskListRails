@@ -1,6 +1,7 @@
 class Task < ActiveRecord::Base
   belongs_to :user
-  #
+  validates_presence_of :title, :user_id
+  
   def check_complete
     complete_q = complete ? "status: completed at #{completed_at}" : "status: incomplete"
     return complete_q
