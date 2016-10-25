@@ -43,18 +43,40 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'users must have uid' do
-
+    ada = users(:ada)
+    assert(ada.valid?)
+    ada.uid = nil
+    assert_not(ada.valid?)
   end
 
   test 'users must have provider' do
-
+    ada = users(:ada)
+    assert(ada.valid?)
+    ada.provider = nil
+    assert_not(ada.valid?)
   end
 
   test 'users must have email' do
-
+    ada = users(:ada)
+    assert(ada.valid?)
+    ada.email = nil
+    assert_not(ada.valid?)
   end
 
-  test 'build_from_github creates a user' do
-
+  test 'build_from_github adds a user to the end of the database' do
+    auth_hash = {uid: 12, "info" => {"name" => "cat", "email" => "cat@cat.com"}}
+    user = User.build_from_github(auth_hash)
+    user.save
+    assert_equal(User.last, user)
   end
+
+  test 'build_from_github creates a new user and increases the user count to 1' do
+    auth_hash = {uid: 12, "info" => {"name" => "cat", "email" => "cat@cat.com"}}
+    assert_difference('User.count', 1) do
+      user = User.build_from_github(auth_hash)
+      user.save
+    end
+  end
+
+
 end
