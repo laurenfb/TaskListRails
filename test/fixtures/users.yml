@@ -2,8 +2,8 @@
 
 ada:
   id: 1
-  uid: "ada"
-  name: 1243534534
+  name: "ada"
+  uid: 1243534534
   provider: github
   email: ada@ada.com
 

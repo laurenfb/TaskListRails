@@ -7,6 +7,8 @@ gem 'awesome_print'
 gem 'omniauth'
 gem 'omniauth-github'
 
+gem 'minitest-reporters'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7'
 # Use sqlite3 as the database for Active Record
@@ -42,7 +44,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'dotenv-rails'
-  gem 'better_errors'
 end
 
 
